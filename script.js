@@ -38,7 +38,6 @@ function eventOnClick() {
 function eventOnKeypress(event) {
 	if (inputValueLenght()>0 && event.keyCode === 13){
 	    createNewItem();
-// } else if (inputValueLenght() === 0) {alert("Please add an item!")}
 	}
 }
 
@@ -54,8 +53,6 @@ function doneItem() {
 button.addEventListener("click", eventOnClick);
 input.addEventListener("keypress", eventOnKeypress);
 for (i=0; i<button_delete.length;i++){button_delete[i].addEventListener("click", deleteItem);}
-for (i=0; i<button_status.length;i++){
-	button_status[i].addEventListener("click", doneItem);
-}
+for (i=0; i<button_status.length;i++){button_status[i].addEventListener("click", doneItem);}
 
 
