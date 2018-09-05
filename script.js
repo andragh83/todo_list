@@ -11,7 +11,7 @@ function inputValueLenght() {
 	return input.value.length;
 }
 
-//creating new shopping with buttons
+//creating new shopping items with buttons
 function createNewItem() {
 	var li = document.createElement("li");
 	li.appendChild(document.createTextNode(input.value));
