@@ -24,6 +24,8 @@ function createNewItem() {
 	btn2.appendChild(document.createTextNode("Delete"))
 	li.appendChild(btn1);
 	li.appendChild(btn2);
+	
+	//events for new created items
 	btn1.addEventListener("click", doneItem);
 	btn2.addEventListener("click", deleteItem);
 }
