@@ -4,6 +4,7 @@ var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
 var button_status = document.querySelectorAll(".status");
 var button_delete = document.querySelectorAll(".delete");
+x=button_delete.length;
 
 
 //checking input
@@ -11,7 +12,7 @@ function inputValueLenght() {
 	return input.value.length;
 }
 
-//creating new shopping with buttons
+//creating new shopping items with buttons
 function createNewItem() {
 	var li = document.createElement("li");
 	li.appendChild(document.createTextNode(input.value));
@@ -24,12 +25,15 @@ function createNewItem() {
 	btn2.appendChild(document.createTextNode("Done"))
 	li.appendChild(btn1);
 	li.appendChild(btn2);
+	btn1.addEventListener("click", deleteItem);
+	btn2.addEventListener("click", doneItem);
+
 }
 
 //event on clicking Enter button
 function eventOnClick() {
 	if (inputValueLenght()>0){
-	    createNewItem();
+	    createNewItem(); 
 				} else {
 					alert("Please add an item!")
 					}
@@ -45,6 +49,8 @@ function eventOnKeypress(event) {
 //delete item function
 function deleteItem() {
 		this.parentNode.remove();
+		// y--;
+		// console.log("When deliting y is "+ y);
 	}
 
 //Toggle done function
@@ -55,7 +61,7 @@ function doneItem() {
 //Events
 button.addEventListener("click", eventOnClick);
 input.addEventListener("keypress", eventOnKeypress);
-for (i=0; i<button_delete.length;i++){button_delete[i].addEventListener("click", deleteItem);}
-for (i=0; i<button_status.length;i++){button_status[i].addEventListener("click", doneItem);}
+for (i=0; i<x; i++) {button_delete[i].addEventListener("click", deleteItem);}; 
+for (i=0; i<x; i++) {button_status[i].addEventListener("click", doneItem);};
 
 
