@@ -20,12 +20,12 @@ function createNewItem() {
 
 	var btn1 = document.createElement("button");
 	var btn2 = document.createElement("button")
-	btn1.appendChild(document.createTextNode("Delete"));
-	btn2.appendChild(document.createTextNode("Done"))
+	btn1.appendChild(document.createTextNode("Done"));
+	btn2.appendChild(document.createTextNode("Delete"))
 	li.appendChild(btn1);
 	li.appendChild(btn2);
-	btn1.addEventListener("click", deleteItem);
-	btn2.addEventListener("click", doneItem);
+	btn1.addEventListener("click", doneItem);
+	btn2.addEventListener("click", deleteItem);
 }
 
 //event on clicking Enter button
