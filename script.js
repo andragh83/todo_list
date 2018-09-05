@@ -24,6 +24,8 @@ function createNewItem() {
 	btn2.appendChild(document.createTextNode("Done"))
 	li.appendChild(btn1);
 	li.appendChild(btn2);
+	btn1.addEventListener("click", deleteItem);
+	btn2.addEventListener("click", doneItem);
 }
 
 //event on clicking Enter button
